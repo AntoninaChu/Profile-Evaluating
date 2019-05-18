@@ -1,0 +1,45 @@
+МОЖЛИВОСТІ МОДУЛІВ, ПАКУНКІВ МОДУЛІВ, БІБЛІОТЕК, ЯКІ ВИКОРИСТОВУЮТЬСЯ
+ДЛЯ РОБОТИ З ДАНИМИ
+
+Основний модуль для роботи з JSON файлами називається json. В цьому модулі
+знаходяться всі необхідні функції для роботи з JSON файлами.
+
+json.dump(obj, fp) – представляє obj як форматований JSON потік в fp.
+
+json.dumps(obj, fp) – переводить obj в ланцюжок json-формату.
+
+json.load(fp) – утворює json з fp.
+
+json.loads(s) – переводить s (string) в об’єкт мови програмування Python.
+
+class json.JSONDecoder(*, object_hook=None, parse_float=None, parse_int=None,
+parse_constant=None, strict=True, object_pairs_hook=None)
+
+Виконує наступні перетворення для декодування:
+
+             JSON			 	                   PYTHON
+
+object					            dict
+array					             list
+string 				        	             str
+number(int)					int
+number(real)					float
+true						True
+false						False
+null						None
+
+	decode(s) – повертає python string, в якому міститься JSON.
+
+raw_decode(s) – декодує JSON документ з s (string) і повертає Python 2-tuple і
+індекс в s, де закінчився документ.
+
+class json.JSONEncoder(*, skipkeys=False, ensure_ascii=True, check_circular=True,
+allow_nan=True, sort_keys=False, indent=None, separators=None, default=None)
+За замовчуванням підтримує всі об’єкти й типи з вище наданої таблиці.
+
+	default(o) – цей метод реалізовується у підкласі таким чином, що він повертає
+  об’єкт переведення для о або викликає базову реалізацію.
+
+	encode(o) – представляє JSON-файл у вигляді Python string.
+
+	iterencode(o) -  кодує об’єкт о і повертає представлення о, як рядка.
