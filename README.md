@@ -26,7 +26,6 @@ Login success!
 
 
 [1] Set a place for searching a winner.
-
 [2] Add a post to check comments.
 [3] Add a post to check likes.
 [4] Add a profile to check subscriptions
