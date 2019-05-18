@@ -14,35 +14,62 @@ _ look_in, то запитується вид даних, які ви хочет
 Приклад:
 
 [1] Set a place for searching a winner.
+
 [2] Add a post to check comments.
+
 [3] Add a post to check likes.
+
 [4] Add a profile to check subscriptions
+
 [5] Start searching.
+
 Enter a number of action: 1
+
 Enter a number of data type you want to set(1. likes, 2. comments, 3. subscriptions): 3
+
 Enter your username: LOGIN
+
 Enter your password: PASSWORD
+
 Login success!
 
 
+
 [1] Set a place for searching a winner.
+
 [2] Add a post to check comments.
+
 [3] Add a post to check likes.
+
 [4] Add a profile to check subscriptions
+
 [5] Start searching.
+
 Enter a number of action: 2
+
 Enter your username: LOGIN
+
 Enter your password: PASSWORD
+
 Enter an url of your post: URL
+
 Login success!
 
 Login success!
+
 
 
 [1] Set a place for searching a winner.
+
 [2] Add a post to check comments.
+
 [3] Add a post to check likes.
+
 [4] Add a profile to check subscriptions
+
 [5] Start searching.
+
 Enter a number of action: 5
+
 Your winner is  WINNER
+
