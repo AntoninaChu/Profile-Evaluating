@@ -17,16 +17,16 @@ parse_constant=None, strict=True, object_pairs_hook=None)
 
 Виконує наступні перетворення для декодування:
 
-             JSON			 	                   PYTHON
+JSON			 	                   PYTHON
 
 object					            dict
-array					             list
-string 				        	             str
-number(int)					int
-number(real)					float
-true						True
-false						False
-null						None
+array					            list
+string 				        	    str
+number(int)					    int
+number(real)					    float
+true						    True
+false						    False
+null						    None
 
 	decode(s) – повертає python string, в якому міститься JSON.
 
