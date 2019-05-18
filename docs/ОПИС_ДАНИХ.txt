@@ -1,0 +1,94 @@
+ОПИС ДАНИХ, ЯКІ БУДЕ ОТРИМУВАТИ ПРОГРАМА
+
+Стягнуті дані з інтернету моя програма отримує у вигляді JSON файлу.
+JSON (JavaScript Object Notation) – це легкий формат, який використовується для
+обміну даними. Саме у форматі JSON більшість веб-служб надають свою відповідь
+на запити.
+
+JSON побудований на двох структурах:
+	1 Колекція пар ключ: значення (в мові програмування Python колекція такого
+  типу реалізована у вигляді словника.
+	2 Впорядкований список значень (  в мові програмування Python реалізовано
+  у вигляді масиву.
+
+Після подання запиту на отримання списку людей, які вподобали певний пост,
+ми отримуємо дані у вигляді JSON. Його структура виглядає наступним чином.
+
+{
+  ‘users’: information_about_each_user,
+	‘user_count’: num_of_users,
+	‘status’: ‘ok’
+}
+
+information_about_each_user - це масив елементами якого є словники з даними
+про кожного користувача, який вподобав допис. Структура цього словника є такою:
+
+{
+	‘pk’: pk_num,
+	‘username’: ‘usrname_of_user’,
+	‘full_name’: ‘full_user_name’,
+	‘is_private’: bool,
+	‘profile_pic_url’: ‘url’,
+	‘profile_pic_id’: ‘pic_id’
+	‘is_verified’: bool,
+	‘has_anonymous_profile_picture’: bool
+}
+
+Після подання запиту на отримання списку коментаторів конкретного посту, ми
+отримуємо дані у тому ж вигляді але структура цих файлів та словників відрізняється.
+Структура даних, які описують коментаторів певного посту наступна:
+
+{
+	‘comment_likes_enabled’: bool,
+	‘comments’: array_of_data_about_each_comment,
+	‘comment_count’: num_of_comments,
+	‘caption’: {
+      ‘pk’: pk_num,
+			‘user_id’: num_id,
+			‘text’: ‘txt’,
+			‘type’: num,
+			‘created_at’: num,
+			‘created_at_utc’: num,
+			'content_type': 'comment',
+      'status': 'Active',
+      'bit_flags': 0,
+      'user': {user_info}     # описано вище
+      'did_report_as_spam': bool,
+      'share_enabled': bool
+		   }
+	‘caption_is_edited’: bool,
+	‘has_more_comments’: bool,
+	'has_more_headload_comments': bool,
+  'media_header_display': 'none',
+  'display_realtime_typing_indicator': bool,
+  'preview_comments': [],
+  'can_view_more_preview_comments': bool,
+  'status': 'ok'
+}
+
+array_of_data_about_each_comment – це масив словників, в яких знаходяться дані
+про конкретний коментар та користувача, який його залишив. Структура цих
+словників є наступною:
+
+{
+  'pk': pk_num,
+  'user_id': id_num,
+  'text': ‘comment_text’,
+  'type': num,
+  'created_at': creation_num,
+  'created_at_utc': num,
+  'content_type': 'comment',
+  'status': 'Active',
+  'bit_flags': 0,
+  ‘user': {user_info}    	# описано вище
+  'did_report_as_spam': bool,
+  'share_enabled': bool,
+  'has_liked_comment': bool,
+  'comment_like_count': num,
+   'inline_composer_display_condition': 'never'
+}
+
+Після виконання запиту на отримання всіх підписок / підписників конкретного
+користувача, ми отримуємо  масив елементами якого є словники з даними про кожного
+користувача. Ці словники мають таку ж саму структуру, як було описано вище
+(information_about_user)
